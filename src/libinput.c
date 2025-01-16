@@ -801,10 +801,10 @@ libinput_event_pointer_get_scroll_value(struct libinput_event_pointer *event,
 	} else {
 		switch (axis) {
 		case LIBINPUT_POINTER_AXIS_SCROLL_HORIZONTAL:
-			value = event->delta.x;
+			value = event->delta.x * 0.2;
 			break;
 		case LIBINPUT_POINTER_AXIS_SCROLL_VERTICAL:
-			value = event->delta.y;
+			value = event->delta.y * 0.2;
 			break;
 		}
 	}
